@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Credit Card Fraud Detection System</title>
+  <link href='https://fonts.googleapis.com/css?family=Pacifico' rel='stylesheet' type='text/css'>
+  <link href='https://fonts.googleapis.com/css?family=Arimo' rel='stylesheet' type='text/css'>
+  <link href='https://fonts.googleapis.com/css?family=Hind:300' rel='stylesheet' type='text/css'>
+  <link href='https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300' rel='stylesheet' type='text/css'>
+  <style>
+    body {
+      font-family: 'Arimo', sans-serif;
+      background-color: #f2f2f2;
+      margin: 0;
+      padding: 0;
+    }
+
+    .login {
+      width: 80%;
+      margin: 50px auto;
+      background-color: #fff;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+
+    h1 {
+      font-family: 'Pacifico', cursive;
+      text-align: center;
+      margin-bottom: 20px;
+      color: #333;
+    }
+
+    fieldset {
+      border: 2px solid green;
+      padding: 20px;
+      margin-bottom: 20px;
+      border-radius: 10px;
+    }
+
+    legend {
+      font-weight: bold;
+      color: green;
+    }
+
+    input[type="number"] {
+      width: calc(25% - 10px);
+      padding: 10px;
+      margin-bottom: 10px;
+      border-radius: 5px;
+      border: 1px solid #ccc;
+      box-sizing: border-box;
+    }
+
+    input[type="number"]:nth-child(4n) {
+      margin-right: 0;
+    }
+
+    button {
+      width: 100%;
+      padding: 10px;
+      border: none;
+      border-radius: 5px;
+      background-color: green;
+      color: #fff;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background-color: darkgreen;
+    }
+
+    .prediction-text {
+      text-align: center;
+      margin-top: 20px;
+      font-size: 18px;
+      color: #333;
+    }
+  </style>
+</head>
+<body>
+
+<div class="login">
+  <h1>ML API for Credit Card Fraud Detection System : By Mahn Bonnie</h1>
+  <marquee><h1 style="color: red;">AI Based Credit Card Fraud Detection System</h1></marquee>
+  <fieldset>
+    <legend>Credit Card Fraud Detection System:</legend>
+    <form action="{{ url_for('predict')}}" method="post">
+      <div class="input-container">
+        <input type="number" name="v1" placeholder="V1:" required>
+        <input type="number" name="v2" placeholder="V2:" required>
+        <input type="number" name="v3" placeholder="V3:" required>
+        <input type="number" name="v4" placeholder="V4:" required>
+      </div>
+      <div class="input-container">
+        <input type="number" name="v5" placeholder="V5:" required>
+        <input type="number" name="v6" placeholder="V6:" required>
+        <input type="number" name="v7" placeholder="V7:" required>
+        <input type="number" name="v8" placeholder="V8:" required>
+      </div>
+      <div class="input-container">
+        <input type="number" name="v9" placeholder="V9:" required>
+        <input type="number" name="v10" placeholder="V10:" required>
+        <input type="number" name="v11" placeholder="V11:" required>
+        <input type="number" name="v12" placeholder="V12:" required>
+      </div>
+      <div class="input-container">
+        <input type="number" name="v13" placeholder="V13:" required>
+        <input type="number" name="v14" placeholder="V14:" required>
+        <input type="number" name="v15" placeholder="V15:" required>
+        <input type="number" name="v16" placeholder="V16:" required>
+      </div>
+      <div class="input-container">
+        <input type="number" name="v17" placeholder="V17:" required>
+        <input type="number" name="v18" placeholder="V18:" required>
+        <input type="number" name="v19" placeholder="V19:" required>
+        <input type="number" name="v20" placeholder="V20:" required>
+      </div>
+      <div class="input-container">
+        <input type="number" name="v21" placeholder="V21:" required>
+        <input type="number" name="v22" placeholder="V22:" required>
+        <input type="number" name="v23" placeholder="V23:" required>
+        <input type="number" name="v24" placeholder="V24:" required>
+      </div>
+      <div class="input-container">
+        <input type="number" name="v25" placeholder="V25:" required>
+        <input type="number" name="v26" placeholder="V26:" required>
+        <input type="number" name="v27" placeholder="V27:" required>
+        <input type="number" name="v28" placeholder="V28:" required>
+      </div>
+      <div class="input-container">
+        <input type="number" name="v29" placeholder="Enter Value of V29:" required>
+      </div>
+      <button type="submit" class="btn btn-primary btn-block btn-large">Predict</button>
+    </form>
+  </fieldset>
+  <div class="prediction-text">{{ prediction_text }}</div>
+</div>
+
+</body>
+</html>
