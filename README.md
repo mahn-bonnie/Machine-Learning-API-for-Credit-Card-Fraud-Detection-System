@@ -16,6 +16,7 @@
 4. Click the "Predict" button to submit the data to the ML model.
 5. View the predicted result displayed on the UI.
 # Technologies Used
+ - Python
  - HTML
  - CSS
 
